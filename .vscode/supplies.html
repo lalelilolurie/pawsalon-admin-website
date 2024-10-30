@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supplies</title>
+    <link rel="stylesheet" href="supplies.css"> 
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="pawsalon_top_logo.png" alt="PawSalon Logo">
+        </div>
+        <nav>
+            <ul class="navlinks">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="supplies.html">Supplies</a></li>
+                <li><a href="services.html">Services</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Edit Pet Supplies</h1>
+
+    <!-- Add New Supplies Container -->
+    <div id="add-product-container">
+        <h2>Add a Supply</h2>
+        <input type="file" id="new-supply-image" accept="image/*"><br>
+        <input type="text" id="new-supply-title" placeholder="Enter supply title">
+        <textarea id="new-supply-description" rows="3" placeholder="Enter supply description"></textarea>
+    </div>
+
+    <!-- Button container for alignment -->
+    <div class="button-container">
+        <button onclick="addService()">Add Supply</button>
+        <button onclick="saveChanges()">Save Changes</button>
+    </div>
+
+    <script>
+        function saveChanges() {
+            alert("Changes saved!");
+            // Add save logic here (e.g., save to server or localStorage)
+        }
+
+        function addService() {
+            // Add functionality to add a new service here
+        }
+    </script>
+
+</body>
+</html>

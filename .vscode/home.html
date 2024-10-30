@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="pawsalon_top_logo.png" alt="PawSalon Logo">
+        </div>
+        <nav>
+            <ul class="navlinks">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="supplies.html">Supplies</a></li>
+                <li><a href="services.html">Services</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="schedule">
+            <div class="schedule-header">
+                <img src="cat n dog top border.png" alt="Top Design" class="border-image">
+            </div>
+            <h2>Today's Schedule : October 26, 2024</h2>
+            <div class="table-wrapper">
+                <table>
+                    <tr>
+                        <td>09:00 AM</td>
+                        <td data-service="">
+                            <span class="service-name">No Appointment</span>
+                            <button onclick="redirectToAppointment('09:00 AM', 'No Appointment')" class="view-details" data-time="09:00 AM" data-service="">View Details</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>10:00 AM</td>
+                        <td data-service="">
+                            <span class="service-name">No Appointment</span>
+                            <button onclick="redirectToAppointment('10:00 AM', 'No Appointment')" class="view-details" data-time="09:00 AM" data-service="">View Details</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>11:00 AM</td>
+                        <td data-service="">
+                            <span class="service-name">No Appointment</span>
+                            <button onclick="redirectToAppointment('11:00 AM', 'No Appointment')" class="view-details" data-time="09:00 AM" data-service="">View Details</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>12:00 PM</td>
+                        <td data-service="">
+                            <span class="service-name">No Appointment</span>
+                            <button onclick="redirectToAppointment('12:00 PM', 'No Appointment')" class="view-details" data-time="09:00 AM" data-service="">View Details</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>01:00 PM</td>
+                        <td data-service="">
+                            <span class="service-name">No Appointment</span>
+                            <button onclick="redirectToAppointment('01:00 PM', 'No Appointment')" class="view-details" data-time="09:00 AM" data-service="">View Details</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>02:00 PM</td>
+                        <td data-service="">
+                            <span class="service-name">No Appointment</span>
+                            <button onclick="redirectToAppointment('02:00 PM', 'No Appointment')" class="view-details" data-time="09:00 AM" data-service="">View Details</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>03:00 PM</td>
+                        <td data-service="">
+                            <span class="service-name">No Appointment</span>
+                            <button onclick="redirectToAppointment('03:00 PM', 'No Appointment')" class="view-details" data-time="09:00 AM" data-service="">View Details</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>04:00 PM</td>
+                        <td data-service="">
+                            <span class="service-name">No Appointment</span>
+                            <button onclick="redirectToAppointment('04:00 PM', 'No Appointment')" class="view-details" data-time="09:00 AM" data-service="">View Details</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>05:00 PM</td>
+                        <td data-service="">
+                            <span class="service-name">No Appointment</span>
+                            <button onclick="redirectToAppointment('05:00 PM', 'No Appointment')" class="view-details" data-time="09:00 AM" data-service="">View Details</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section class="gallery">
+            <h2>Happy Pets Gallery</h2>
+            <div class="gallery-grid">
+                <!-- Images will be loaded here -->
+            </div>
+        </section>
+
+        <section class="upload-form">
+            <h2>Upload Pet Image</h2>
+            <form method="POST" action="upload_image.php" enctype="multipart/form-data">
+                <input type="file" name="image" accept="image/*">
+                <input type="text" name="image_name" placeholder="Image Name">
+                <textarea name="caption" placeholder="Add a caption (optional)"></textarea>
+                <button type="submit">Upload</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 PawSalon. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function redirectToAppointment(time, service) {
+            const url = `appointment.html?time=${encodeURIComponent(time)}&service=${encodeURIComponent(service)}`;
+            window.location.href = url;
+        }
+    </script>
+    
+</body>
+</html>
