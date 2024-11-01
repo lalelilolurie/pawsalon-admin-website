@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #fff;
+    height: 100vh;
+    padding-top: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.logo-img {
+    position: relative; 
+    left: 10px;
+    top: -50px;
+    width: 175px; 
+    height: auto;
+    margin-top: 50px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+}
+
+.sidebar ul li a {
+    color: #36A7C5;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar ul li a:hover {
+    background-color: #CAE2EA;
+}
+
+.main-content {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 220px; /* Adjust for sidebar width */
+    padding: 20px; 
+    text-align: left; /* Align content to the left */
+    width: calc(100% - 220px); /* Adjust width for sidebar */
+    padding-bottom: 70px; /* Adjust this value to the height of your footer */
+}
+
+.review h2 {
+    padding: 15px;
+    color: #36A7C5;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px; /* Space below the image */
+}
+
+.review-details h3 {
+    padding: 10px;
+    color: #36A7C5;
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+    font-size: 25px;
+}
+
+.table-wrapper {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%; /* Set the table width to 100% of its container */
+    border-collapse: collapse; /* This is the magic line! */
+}
+
+th {
+    border: 1.5px solid #36A7C5; /* Line between table data cells */
+    color: #36A7C5;
+    background-color: #CAE2EA;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+}
+
+td {
+    border: 1.5px solid #36A7C5; /* Line between table data cells */
+    color: #36A7C5;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}

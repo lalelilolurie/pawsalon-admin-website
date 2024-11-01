@@ -1,76 +1,82 @@
-header {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.container {
     display: flex;
-    justify-content: space-between; 
-    align-items: center; 
-    padding: 5px; 
-  }
-  
-  img {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #fff;
+    height: 100vh;
+    padding-top: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.logo-img {
     position: relative; 
     left: 10px;
-    top: -35px;
-    width: 200px; 
-    height: 150px;
-  }
-  
-  nav {
-    display: flex; 
-    position: relative; 
-    top: -30px; 
-    right: 300px; 
-  }
-  
-  .navlinks {
-    list-style: none; 
-    display: flex; 
-    margin: 0; 
-    padding: 0; 
-  }
-  
-  .navlinks li {
-    margin-right: 175px; 
-    
-  }
-  
-  .navlinks a {
-    text-decoration: none; 
-    color: #36A7C5; 
-    font-weight: 150; 
-    font-family: 'Poppins', sans-serif; 
-    font-size: 17px; 
-  }
-  /* Add border-bottom to the header */
-  header::after {
-    content: ''; 
-    position: absolute; 
-    bottom: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 3px; 
-    background-color: #CAE2EA; 
-    top: 100px;
-  }
+    top: -50px;
+    width: 175px; 
+    height: auto;
+    margin-top: 50px;
+}
 
-main {
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+}
+
+.sidebar ul li a {
+    color: #36A7C5;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar ul li a:hover {
+    background-color: #CAE2EA;
+}
+
+.main-content {
+    margin-left: 200px; /* Offset to account for the sidebar */
     padding: 20px;
-    max-width: 1200px;
+    flex-grow: 1; /* Expands main content to occupy available space */
+    background-color: #f9f9f9; /* Optional background for visibility */
+    display: flex;
+    flex-direction: column;
+}
+
+.pet-image {
+    width: 500px;
+    height: auto;
     margin: 0 auto;
+    display: block;
 }
 
 .schedule {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 40px;
-    position: relative;
-}
-
-.schedule-header {
+    padding: 0 20px 20px;
     text-align: center;
-    margin-bottom: -59px; 
-}
-
-.border-image {
-    max-width: 100%;
-    width: 500px;
-    height: auto;
 }
 
 .schedule h2 {
@@ -78,158 +84,87 @@ main {
     padding: 15px;
     color: #36A7C5;
     border-radius: 10px;
-    text-align: center;
-    font-family: 'Poppins', sans-serif; 
+    font-family: 'Poppins', sans-serif;
+    margin-top: 0px; /* Space below the image */
 }
 
-/* Table wrapper to control overflow for rounded corners */
+.schedule h3, .manage-section h4 {
+    padding: 10px;
+    color: #36A7C5;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: -10px;
+    text-align: left;
+    size: 15px;
+    font-size: 25px;
+}
+
 .table-wrapper {
     overflow: hidden;
-    border-radius: 10px; 
+    border-radius: 10px;
 }
 
-/* Table styling */
-.schedule table {
+.schedule table, .manage-section table {
+    border: 1.5px solid #36A7C5;
+    table-layout: fixed;
     width: 100%;
-    border-spacing: 0; 
+    border-spacing: 0;
     margin-top: 20px;
+    color: #c4e3f3;
+    background-color: #f5faff;
+}
+
+.schedule table th, .manage-section table th,
+.schedule table td, .manage-section table td {
+    font-size: 12px; /* Smaller text for table */
+    padding: 5px;
+}
+
+.schedule table th, .manage-section table th {
+    background-color: #c4e3f3;
     color: #36A7C5;
+    border: 1.5px solid #36A7C5; /* Line between header cells */
+    text-align: center;
+    font-weight: normal;
 }
 
-/* Table cells styling */
-.schedule table td {
-    border: 2px solid #36A7C5; 
-    padding: 10px;
-    text-align: left;
-    font-family: 'Poppins', sans-serif; 
-    position: relative; /* Enable positioning for the button */
+.schedule table td, .manage-section table td {
+    border: 1.5px solid #36A7C5; /* Line between table data cells */
+    color: #36A7C5;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* Optional: Bold text in the first column */
-.schedule table td:first-child {
+.schedule table td:first-child, .manage-section table td:first-child {
     font-weight: bold;
     width: 30%;
 }
 
-/* Add border radius to the top-left and top-right corners */
-.schedule table tr:first-child td:first-child {
-    border-top-left-radius: 10px;
-}
-
-.schedule table tr:first-child td:last-child {
-    border-top-right-radius: 10px;
-}
-
-/* Add border radius to the bottom-left and bottom-right corners */
-.schedule table tr:last-child td:first-child {
-    border-bottom-left-radius: 10px;
-}
-
-.schedule table tr:last-child td:last-child {
-    border-bottom-right-radius: 10px;
-}
-
-
-.gallery {
-    margin-top: 20px;
-    font-family: 'Poppins', sans-serif; 
-}
-
-.gallery h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 1.5rem;
-    color: #006494;
-    font-family: 'Poppins', sans-serif; 
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.gallery-item {
-    border: 2px solid #ccc;
-    padding: 10px;
-    text-align: center;
-    border-radius: 8px;
-    background-color: #fff;
-}
-
-.gallery-item img {
-    max-width: 100%;
-    border-radius: 8px;
-}
-
-/* Style the button container within the table cell */
-.schedule table td > button {
-    position: absolute; /* Position the button absolutely within the cell */
-    top: 50%; /* Center the button vertically */
-    right: 10px; /* Adjust the right margin to control button position */
-    transform: translateY(-50%); /* Center the button vertically */
-}
-
-.view-details {
-    background-color: #36A7C5; /* Example color */
-    color: white;
+/* Style for action buttons in table */
+.schedule table td .action-buttons a,
+.manage-section table td .action-buttons a {
+    display: inline-block;
     padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    /* Remove margin-left: auto; */
-}
-
-.view-details:hover {
-    background-color: #006494; /* Example hover color */
-}
-
-.upload-form {
-    margin-top: 40px;
-}
-
-.upload-form h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #36A7C5; /* Match the schedule heading color */
-    font-family: 'Poppins', sans-serif; /* Match the font */
-}
-
-.upload-form form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.upload-form input[type="file"],
-.upload-form input[type="text"],
-.upload-form textarea {
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 2px solid #36A7C5; /* Match the table border color */
-    border-radius: 4px;
-    width: 250px;
-    font-family: 'Poppins', sans-serif; /* Match the font */
-}
-
-.upload-form textarea {
-    resize: vertical; /* Allow vertical resizing of the textarea */
-    height: 80px; /* Set initial height of the textarea */
-}
-
-.upload-form button[type="submit"] {
-    background-color: #36A7C5; /* Match the button color */
+    margin: 2px;
+    background-color: #36A7C5;
     color: white;
-    padding: 10px 20px;
-    border: none;
+    text-decoration: none;
     border-radius: 5px;
-    cursor: pointer;
-    font-family: 'Poppins', sans-serif; /* Match the font */
-    font-weight: bold; /* Make the button text bold */
+    font-size: 10px;
 }
 
-.upload-form button[type="submit"]:hover {
-    background-color: #006494; /* Match the button hover color */
+.schedule table td .action-buttons a:hover,
+.manage-section table td .action-buttons a:hover {
+    background-color: #2e91b0; /* Darker shade on hover */
+}
+
+.gallery h5 {
+    color: #36A7C5;
+    font-size: 30px;
+}
+
+.upload-form h6 {
+    color: #36A7C5;
+    font-size: 20px;
 }
 
 footer {
@@ -237,6 +172,8 @@ footer {
     color: #36A7C5;
     text-align: center;
     padding: 15px 0;
-    margin-top: 40px;
-    width: 100vw;
+    margin-top: auto;
+    border-top: 2px solid #36A7C5;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
 }

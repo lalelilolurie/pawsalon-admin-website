@@ -3,120 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Admin Dashboard</title>
     <link rel="stylesheet" href="home.css">
 </head>
 <body>
-
-    <header>
-        <div class="logo">
-            <img src="pawsalon_top_logo.png" alt="PawSalon Logo">
-        </div>
-        <nav>
-            <ul class="navlinks">
-                <li><a href="home.html">Home</a></li>
-                <li><a href="supplies.html">Supplies</a></li>
-                <li><a href="services.html">Services</a></li>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <img src="pawsalon_top_logo.png" class="logo-img" alt="PawSalon Logo">
+            <ul>
+                <li><a href="home.html">Admin Dashboard</a></li>
+                <li><a href="review.html">Review</a></li>
             </ul>
-        </nav>
-    </header>
+        </div>
 
-    <main>
-        <section class="schedule">
-            <div class="schedule-header">
-                <img src="cat n dog top border.png" alt="Top Design" class="border-image">
-            </div>
-            <h2>Today's Schedule : October 26, 2024</h2>
-            <div class="table-wrapper">
-                <table>
-                    <tr>
-                        <td>09:00 AM</td>
-                        <td data-service="">
-                            <span class="service-name">No Appointment</span>
-                            <button onclick="redirectToAppointment('09:00 AM', 'No Appointment')" class="view-details" data-time="09:00 AM" data-service="">View Details</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>10:00 AM</td>
-                        <td data-service="">
-                            <span class="service-name">No Appointment</span>
-                            <button onclick="redirectToAppointment('10:00 AM', 'No Appointment')" class="view-details" data-time="09:00 AM" data-service="">View Details</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>11:00 AM</td>
-                        <td data-service="">
-                            <span class="service-name">No Appointment</span>
-                            <button onclick="redirectToAppointment('11:00 AM', 'No Appointment')" class="view-details" data-time="09:00 AM" data-service="">View Details</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>12:00 PM</td>
-                        <td data-service="">
-                            <span class="service-name">No Appointment</span>
-                            <button onclick="redirectToAppointment('12:00 PM', 'No Appointment')" class="view-details" data-time="09:00 AM" data-service="">View Details</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>01:00 PM</td>
-                        <td data-service="">
-                            <span class="service-name">No Appointment</span>
-                            <button onclick="redirectToAppointment('01:00 PM', 'No Appointment')" class="view-details" data-time="09:00 AM" data-service="">View Details</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>02:00 PM</td>
-                        <td data-service="">
-                            <span class="service-name">No Appointment</span>
-                            <button onclick="redirectToAppointment('02:00 PM', 'No Appointment')" class="view-details" data-time="09:00 AM" data-service="">View Details</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>03:00 PM</td>
-                        <td data-service="">
-                            <span class="service-name">No Appointment</span>
-                            <button onclick="redirectToAppointment('03:00 PM', 'No Appointment')" class="view-details" data-time="09:00 AM" data-service="">View Details</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>04:00 PM</td>
-                        <td data-service="">
-                            <span class="service-name">No Appointment</span>
-                            <button onclick="redirectToAppointment('04:00 PM', 'No Appointment')" class="view-details" data-time="09:00 AM" data-service="">View Details</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>05:00 PM</td>
-                        <td data-service="">
-                            <span class="service-name">No Appointment</span>
-                            <button onclick="redirectToAppointment('05:00 PM', 'No Appointment')" class="view-details" data-time="09:00 AM" data-service="">View Details</button>
-                        </td>
-                    </tr>
-                </table>
-            </div>
+        <!-- Main Content Wrapper -->
+        <div class="main-content">
+            <main>
+                <section class="schedule">
+                    <img src="cat n dog top border.png" class="pet-image" alt="Cat and Dog Image">
+                    <h2>Appointment Schedule</h2>
+
+                    <!-- Manage Service Appointment -->
+                    <section class="manage-section">
+                        <h3>Manage Service Appointment</h3>
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th style="width: 5%;">Id</th>
+                                        <th style="width: 7%;">First Name</th>
+                                        <th style="width: 7%;">Last Name</th>
+                                        <th style="width: 10%;">Phone</th>
+                                        <th style="width: 15%;">Email</th>
+                                        <th style="width: 15%;">Address</th>
+                                        <th style="width: 8%;">Furbaby's Name</th>
+                                        <th style="width: 8%;">Pet Type</th>
+                                        <th style="width: 10%;">Date</th>
+                                        <th style="width: 8%;">Time</th>
+                                        <th style="width: 10%;">Service Type</th>
+                                        <th style="width: 10%;">Chosen Service</th>
+                                        <th style="width: 10%;">Additional Details</th>
+                                        <th style="width: 10%;">Status</th>
+                                        <th style="width: 10%;">Action</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Ericka </td>
+                                        <td>Brudo</td>
+                                        <td>09297925033</td>
+                                        <td>ericka@gmail.com</td>
+                                        <td>123 Buoan, Dagupan, Pangasinan</td>
+                                        <td>Blacky</td>
+                                        <td>Dog</td>
+                                        <td>10-01-2024</td>
+                                        <td>09:00 AM</td>
+                                        <td>Grooming</td>
+                                        <td>Bath & Blow Dry</td>
+                                        <td>N/A</td>
+                                        <td>Pending</td>
+                                        <td>
+                                            <div class="action-buttons">
+                                                <a href="#">Accept</a>
+                                                <a href="#">Decline</a>
+                                                <a href="#">Delete</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                <!-- Manage Pet Boarding -->
+                <section class="manage-section">
+                    <h4>Manage Pet Boarding</h4>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th style="width: 5%;">Id</th>
+                                    <th style="width: 7%;">First Name</th>
+                                    <th style="width: 7%;">Last Name</th>
+                                    <th style="width: 10%;">Phone</th>
+                                    <th style="width: 15%;">Email</th>
+                                    <th style="width: 15%;">Address</th>
+                                    <th style="width: 8%;">Furbaby's Name</th>
+                                    <th style="width: 8%;">Pet Type</th>
+                                    <th style="width: 8%;">Pet Check In</th>
+                                    <th style="width: 10%;">Date</th>
+                                    <th style="width: 8%;">Time</th>
+                                    <th style="width: 8%;">Days</th>
+                                    <th style="width: 8%;">Hours</th>
+                                    <th style="width: 10%;">Additional Details</th>
+                                    <th style="width: 10%;">Status</th>
+                                    <th style="width: 10%;">Action</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Ericka</td>
+                                    <td>Brudo</td>
+                                    <td>09297925033</td>
+                                    <td>ericka@gmail.com</td>
+                                    <td>123 Buoan, Dagupan, Pangasinan</td>
+                                    <td>Blacky</td>
+                                    <td>Dog</td>
+                                    <td>idk</td>
+                                    <td>10-01-2024</td>
+                                    <td>09:00 AM</td>
+                                    <td>1</td>
+                                    <td>00</td>
+                                    <td>N/A</td>
+                                    <td>Pending</td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <a href="#">Accept</a>
+                                            <a href="#">Decline</a>
+                                            <a href="#">Delete</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </main>
+
+            <!-- Alisin mo pag di mo na need -->
+            <section class="gallery">
+                <h5>Happy Pets Gallery</h5>
+                <div class="gallery-grid">
+                    <!-- Images will be loaded here -->
+                </div>
+            </section>
+
+            <section class="upload-form">
+                <h6>Upload Pet Image</h6>
+                <form method="POST" action="upload_image.php" enctype="multipart/form-data">
+                    <input type="file" name="image" accept="image/*">
+                    <button type="submit">Upload</button>
+                </form>
+            </section>
         </section>
 
-        <section class="gallery">
-            <h2>Happy Pets Gallery</h2>
-            <div class="gallery-grid">
-                <!-- Images will be loaded here -->
-            </div>
-        </section>
-
-        <section class="upload-form">
-            <h2>Upload Pet Image</h2>
-            <form method="POST" action="upload_image.php" enctype="multipart/form-data">
-                <input type="file" name="image" accept="image/*">
-                <input type="text" name="image_name" placeholder="Image Name">
-                <textarea name="caption" placeholder="Add a caption (optional)"></textarea>
-                <button type="submit">Upload</button>
-            </form>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 PawSalon. All rights reserved.</p>
-    </footer>
+            <footer>
+                <p>&copy; 2024 PawSalon. All rights reserved.</p>
+            </footer>
+        </div>
+    </div>
 
     <script>
         function redirectToAppointment(time, service) {
@@ -124,6 +164,5 @@
             window.location.href = url;
         }
     </script>
-    
 </body>
 </html>
